@@ -29,4 +29,11 @@
 # Executables
 *.exe
 *.out
-*.app
+*.app 
+
+# User settings 
+*.user
+
+
+build*
+*~
