@@ -34,4 +34,4 @@
 # User settings 
 *.user
 *~
-/
+/build*/
