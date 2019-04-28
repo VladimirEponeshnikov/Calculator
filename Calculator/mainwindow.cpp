@@ -36,3 +36,20 @@ void MainWindow::digit_pressed()
     ui->label->setText(newLabel);
 
 }
+
+void MainWindow::on_pushButton_point_released()
+{
+    ui->label->setText(ui->label->text() + ".");
+}
+
+void MainWindow::on_pushButton_pm_released()
+{
+    QPushButton *button = (QPushButton*) sender();
+    double labelNumber;
+    QString newLabel;
+
+    labelNumber = ui -> label -> text().toDouble();
+    labelNumber = labelNumber * -1;
+    newLabel = QString::number(labelNumber, 'g', 15);
+    ui -> label -> setText(newLabel);
+}

@@ -22,6 +22,8 @@ private:
 private slots:
     void digit_pressed();
 
+    void on_pushButton_point_released();
+    void on_pushButton_pm_released();
 };
 
 #endif // MAINWINDOW_H
