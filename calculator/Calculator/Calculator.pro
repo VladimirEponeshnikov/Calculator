@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-06-24T23:04:13
+# Project created by QtCreator 2019-06-20T21:32:24
 #
 #-------------------------------------------------
 
@@ -26,18 +26,18 @@ CONFIG += c++11
 
 SOURCES += \
         ac.cpp \
-        calculator.cpp \
         dot.cpp \
         main.cpp \
-        mainwindow.cpp \
+        calculator.cpp \
         numbers.cpp \
-        operation.cpp
+        operation.cpp \
+        ravno.cpp
 
 HEADERS += \
-        mainwindow.h
+        calculator.h
 
 FORMS += \
-        mainwindow.ui
+        calculator.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -24,7 +24,10 @@ private slots:
     void on_pushButton_ravno_clicked();
     void on_pushButton_ac_clicked();
     void operation();
-    double labl(double first, double second);
+    double lablplus(double first, double second);
+    double lablminus(double first, double second);
+    double lablumn(double first, double second);
+    double labldel(double first, double second);
 };
 
 #endif // CALCULATOR_H
