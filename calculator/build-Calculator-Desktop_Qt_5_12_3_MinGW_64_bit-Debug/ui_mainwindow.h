@@ -51,6 +51,15 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(0, 0, 236, 111));
+        QFont font;
+        font.setFamily(QString::fromUtf8("MS Sans Serif"));
+        font.setPointSize(19);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setUnderline(false);
+        font.setWeight(50);
+        font.setStrikeOut(false);
+        label->setFont(font);
         label->setStyleSheet(QString::fromUtf8(" QLabel\n"
 "{\n"
 "qproperty-alignment: 'AlignVCenter | AlignRight';\n"
@@ -62,15 +71,47 @@ public:
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(-1, 110, 61, 61));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(0, 215, 0);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(58, 110, 61, 61));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(0, 215, 0);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(117, 110, 61, 61));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(0, 215, 0);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(176, 110, 61, 61));
+        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(0, 215, 0);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
         pushButton_5->setGeometry(QRect(117, 169, 61, 61));
@@ -174,12 +215,40 @@ public:
         pushButton_15 = new QPushButton(centralWidget);
         pushButton_15->setObjectName(QString::fromUtf8("pushButton_15"));
         pushButton_15->setGeometry(QRect(117, 346, 61, 61));
+        pushButton_15->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(0, 215, 0);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
         pushButton_16 = new QPushButton(centralWidget);
         pushButton_16->setObjectName(QString::fromUtf8("pushButton_16"));
         pushButton_16->setGeometry(QRect(176, 169, 61, 120));
+        pushButton_16->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
         pushButton_17 = new QPushButton(centralWidget);
         pushButton_17->setObjectName(QString::fromUtf8("pushButton_17"));
         pushButton_17->setGeometry(QRect(176, 287, 61, 120));
+        pushButton_17->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
