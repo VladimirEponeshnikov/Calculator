@@ -30,6 +30,7 @@ SOURCES += \
         dot.cpp \
         main.cpp \
         mainwindow.cpp \
+        numbers.cpp \
         operation.cpp
 
 HEADERS += \
