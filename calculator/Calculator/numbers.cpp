@@ -13,7 +13,7 @@ void Calculator::numbers()
 
        s=ui->results->text()+b->text();
 
-   }  else {
+   } else {
    n=(ui->results->text()+b->text()).toDouble();
    s=QString::number(n,'g',15);
    ui->results->setText(s);
