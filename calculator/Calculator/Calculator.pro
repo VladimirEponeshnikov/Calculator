@@ -29,7 +29,8 @@ SOURCES += \
         calculator.cpp \
         dot.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        operation.cpp
 
 HEADERS += \
         mainwindow.h
