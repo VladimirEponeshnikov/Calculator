@@ -10,7 +10,7 @@ services:
   - xvfb
 
 script:
- # - qmake QMAKE_CXXFLAGS+=-std=gnu++11
- # - make
+  - qmake QMAKE_CXXFLAGS+=-std=gnu++11
+  - make
   - xvfb-run -a ./test/tst_calctest
 
