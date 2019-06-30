@@ -1,31 +1,16 @@
-language: cpp
-
+language: C++ 
 dist: xenial
-#os:
-# - linux
 
-compiler:
-  - g++
+addons:
+  apt:
+    packages:
+      - qt5-default
+
+services:
+  - xvfb
 
 script:
-#  - git ls-files | xargs clang-format && git diff --exit-code
-#  - make Makefile clean
-#  - make Makefile all
-#  - make Makefile print
-#  - make Makefile copy
-
-#branches:
-#0 only:
-# - master
-
-deploy:
-  provider: pages
-  github_token: $GITHUB_OAUTH_TOKEN
-  local-dir: "./bin"
-#  target-branch: gh-pages
-  skip_cleanup: true
-  on:
-    #tags: true
-    branch: master
-
+  - qmake QMAKE_CXXFLAGS+=-std=gnu++11
+  - make
+  - xvfb-run -a ./test/tst_calctest
 
