@@ -31,10 +31,12 @@ SOURCES += \
         calculator.cpp \
         numbers.cpp \
         operation.cpp \
-        ravno.cpp
+        ravno.cpp \
+        test.cpp
 
 HEADERS += \
-        calculator.h
+        calculator.h \
+        ctest.h
 
 FORMS += \
         calculator.ui

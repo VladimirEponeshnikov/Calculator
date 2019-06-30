@@ -1,6 +1,5 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
-
 #include <QMainWindow>
 extern double first,label;
 extern int r;
