@@ -40,11 +40,11 @@ void CalcTest::cleanupTestCase()
 
 void CalcTest::shouldAdd()
 {
-    ui->numButton3->click();
+    ui->numButton6->click();
     ui->actionButtonAdd->click();
-    ui->numButton5->click();
+    ui->numButton8->click();
     ui->calcButton->click();
-    QVERIFY2(ui->output->text() == "8", "Failure");
+    QVERIFY2(ui->output->text() == "14", "Failure");
 }
 
 void CalcTest::shouldSub()
