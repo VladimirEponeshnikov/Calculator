@@ -16,10 +16,13 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionButtonSub, SIGNAL(clicked()), this,SLOT(onActionButtonClick()));
     connect(ui->actionButtonMult, SIGNAL(clicked()), this,SLOT(onActionButtonClick()));
 
-    for(int i = 0; i < 11; ++i){
+    for(int i = 0; i < 10; ++i){
+
         QString buttonName = "numButton" + QString::number(i);
+
         QPushButton *button = findChild<QPushButton *>(buttonName);
         connect(button, SIGNAL(clicked()), this,SLOT(onNumButtonClick()));
+
     }
 }
 
@@ -49,7 +52,7 @@ void MainWindow::onCalcButtonClick()
     if (action == "-") {
         result = left - value;
     } else
-    if (action == "x") {
+    if (action == "*") {
         result = left * value;
     } else
     if (action == "/") {
@@ -103,4 +106,12 @@ void MainWindow::onActionButtonClick()
 
     qDebug() << "action" << action;
     qDebug() << "left" << value;
+}
+
+void MainWindow::on_numButton10_clicked()
+{
+
+ if(!(ui->output->text().contains('.')))
+  ui->output->setText(ui->output->text()+".");
+
 }

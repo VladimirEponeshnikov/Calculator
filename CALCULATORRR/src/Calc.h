@@ -21,6 +21,10 @@ private slots:
     void onCalcButtonClick();
     void onNumButtonClick();
     void onActionButtonClick();
+
+
+    void on_numButton10_clicked();
+
 public:
     Ui::MainWindow *ui;
     double left = 0;
