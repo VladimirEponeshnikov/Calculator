@@ -31,12 +31,62 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_numButton10_clicked()
+{
+
+ if(!(ui->output->text().contains('.')))
+  ui->output->setText(ui->output->text()+".");
+
+}
+
 void MainWindow::onResetButtonClick()
 {
     ui->output->clear();
     left = 0;
     isLeft = true;
 }
+
+
+void MainWindow::onActionButtonClick()
+{
+    QPushButton *button = (QPushButton *)sender();
+    QString currentValue = ui->output->text();
+    double value = currentValue.toDouble();
+
+    action = button->text();
+    left = value;
+    isLeft = false;
+    isCalced = false;
+
+    qDebug() << "action" << action;
+    qDebug() << "left" << value;
+}
+
+void MainWindow::onNumButtonClick()
+{
+    QPushButton *button = (QPushButton *)sender();
+    QString digit = button->text();
+    QString currentValue = ui->output->text();
+
+    qDebug() << "number clicked" << digit;
+
+    if (!isLeft || isCalced) {
+        qDebug() << "reset output";
+        currentValue = "";
+    }
+
+    isLeft = true;
+
+    if (isCalced) {
+        qDebug() << "reset left";
+        left = 0;
+    }
+
+    isCalced = false;
+
+    ui->output->setText(currentValue + digit);
+}
+
 
 void MainWindow::onCalcButtonClick()
 {
@@ -66,52 +116,4 @@ void MainWindow::onCalcButtonClick()
     isCalced = true;
     isLeft = true;
     left = value;
-}
-
-void MainWindow::onNumButtonClick()
-{
-    QPushButton *button = (QPushButton *)sender();
-    QString digit = button->text();
-    QString currentValue = ui->output->text();
-
-    qDebug() << "number clicked" << digit;
-
-    if (!isLeft || isCalced) {
-        qDebug() << "reset output";
-        currentValue = "";
-    }
-
-    isLeft = true;
-
-    if (isCalced) {
-        qDebug() << "reset left";
-        left = 0;
-    }
-
-    isCalced = false;
-
-    ui->output->setText(currentValue + digit);
-}
-
-void MainWindow::onActionButtonClick()
-{
-    QPushButton *button = (QPushButton *)sender();
-    QString currentValue = ui->output->text();
-    double value = currentValue.toDouble();
-
-    action = button->text();
-    left = value;
-    isLeft = false;
-    isCalced = false;
-
-    qDebug() << "action" << action;
-    qDebug() << "left" << value;
-}
-
-void MainWindow::on_numButton10_clicked()
-{
-
- if(!(ui->output->text().contains('.')))
-  ui->output->setText(ui->output->text()+".");
-
 }
