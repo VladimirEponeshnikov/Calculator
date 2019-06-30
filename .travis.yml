@@ -22,7 +22,7 @@ deploy:
   provider: pages
   github_token: $GITHUB_OAUTH_TOKEN
   local-dir: "./bin"
-  target-branch: gh-pages
+#  target-branch: gh-pages
   skip_cleanup: true
   on:
     #tags: true
